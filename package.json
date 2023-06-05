@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "http://localhost:3000",
+  "proxy": "https://task-egrz.onrender.com",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
@@ -21,9 +21,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "REACT_APP_API_URL=https://task-egrz.onrender.com react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:prod": "REACT_APP_ALGOLIA_INDEX=prod  REACT_APP_API_URL=https://task-egrz.onrender.com react-scripts build"
   },
   "eslintConfig": {
     "extends": [
