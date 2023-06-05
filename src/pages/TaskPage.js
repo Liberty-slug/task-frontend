@@ -18,7 +18,7 @@ function TaskPage() {
   const handleClick = async e => {
     e.preventDefault();
     try {
-      await axios.post("https://task-egrz.onrender.com/api/v1/tasks/",  values )
+      await axios.post("/api/v1/tasks/",  values )
       setSuccessmsg(true)
       navigate("/");
       setTimeout(() => {
