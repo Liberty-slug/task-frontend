@@ -12,7 +12,7 @@ const Listtask = () => {
     try {
       const {
         data: { tasks },
-      } = await axios.get("/api/v1/tasks");
+      } = await axios.get("https://task-egrz.onrender.com/api/v1/tasks/");
       setTask(tasks);
     } catch (error) {
       console.log(error);
@@ -22,7 +22,7 @@ const Listtask = () => {
 
   const handleDelete = async (taskID) => {
     try {
-      await axios.delete(`/api/v1/tasks/${taskID}`);
+      await axios.delete(`https://task-egrz.onrender.com/api/v1/tasks/${taskID}`);
       showTasks();
     } catch (error) {
       console.log(error);
