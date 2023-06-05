@@ -19,7 +19,7 @@ const Taskedit = () => {
     try {
       const {
         data: { task },
-      } = await axios.get(`/api/v1/tasks/${ID}`);
+      } = await axios.get(`https://task-egrz.onrender.com/api/v1/tasks/${ID}`);
       setTask(task);
     } catch (error) {
       console.log(error);
@@ -31,7 +31,7 @@ const Taskedit = () => {
   const handleClick = async e => {
     e.preventDefault();
     try {
-      await axios.patch("/api/v1/tasks/",  values )
+      await axios.patch("https://task-egrz.onrender.com/api/v1/tasks/",  values )
       console.log(values)
       // setSuccessmsg(true)
       // navigate("/");
